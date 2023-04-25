@@ -11,5 +11,5 @@ resource "digitalocean_droplet" "drone" {
   region   = "nyc3"
   size     = "s-1vcpu-1gb"
   ssh_keys = [digitalocean_ssh_key.mbp.fingerprint]
-  user_data = ${file("user_data.sh")} 
+  user_data = file("user_data.sh")
 }
