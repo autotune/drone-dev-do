@@ -39,7 +39,8 @@ jobs:
         tf_actions_version: 0.13.0
         tf_actions_working_dir: 'terraform'
         tf_actions_subcommand: 'apply'
-        args: '-var="drone_github_client_id=${{ secrets.DRONE_GITHUB_CLIENT_ID }}" -var="drone_github_client_secret=${{ secrets.drone_github_client_secret }}" -var="drone_rpc_secret=${{ secrets.drone_rpc_secret }}" -var=drone_server_host=${{ secrets.drone_server_host }}"'
+        # args: '-var="drone_github_client_id=${{ secrets.DRONE_GITHUB_CLIENT_ID }}" -var="drone_github_client_secret=${{ secrets.drone_github_client_secret }}" -var="drone_rpc_secret=${{ secrets.drone_rpc_secret }}" -var=drone_server_host=${{ secrets.drone_server_host }}"'
+        args: '-var="drone_github_client_id=${{ secrets.DRONE_GITHUB_CLIENT_ID }}"'
       env:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TF_ACTION_WORKING_DIR: 'terraform'
