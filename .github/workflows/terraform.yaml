@@ -39,9 +39,9 @@ jobs:
         tf_actions_version: 0.13.0
         tf_actions_working_dir: 'terraform'
         tf_actions_subcommand: 'apply'
-        args: ''
+        args: '-var=drone_github_client_id=${{ secrets.DRONE_GITHUB_CLIENT_ID }} -var=drone_github_client_secret=${{ secrets.drone_github_client_secret }} -var=DRONE_RPC_SECRET=${{ secrets.drone_rpc_secret }} -var=drone_server_host=${{ secrets.drone_server_host }}'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TF_ACTION_WORKING_DIR: 'terraform'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
