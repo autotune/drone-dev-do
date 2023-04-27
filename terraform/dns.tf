@@ -8,4 +8,5 @@ resource "digitalocean_record" "drone" {
   type   = "A"
   name   = "drone"
   value  = digitalocean_droplet.drone.ipv4_address 
+  ttl    = 30
 }
