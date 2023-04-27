@@ -6,6 +6,6 @@ data "digitalocean_domain" "wayofthesys" {
 resource "digitalocean_record" "drone" {
   domain = data.digitalocean_domain.wayofthesys.id
   type   = "A"
-  name   = "www"
+  name   = "drone"
   value  = digitalocean_droplet.drone.ipv4_address 
 }
