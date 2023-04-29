@@ -1,3 +1,3 @@
 data "digitalocean_project" "wayofthesys" {
-  name = "wayofthesys"
+  name = "WayOfTheSys"
 }
